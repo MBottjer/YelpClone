@@ -1,0 +1,51 @@
+// Place all the styles related to the homepage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+span.stars, span.stars span {
+    display: block;
+    background: url(stars.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}
+
+a.functions {
+  font-size:12px;
+}
+
+a.signing { 
+  margin-left:400px;
+}
+
+a.add-rest {
+  margin-left:10px;
+}
+
+div.wrapper {
+  background-color: black;
+  width:400px;
+}
+
+.navbar {
+  background-color: black;
+}
+
+.navbar-brand {
+  color:#F0F0F0;
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+.update-delete {
+  font-size:10px;
+}
+
+div#map-canvas {
+  height:200px;
+  width:200px;
+  float:right;
+  display:inline-block;
+}

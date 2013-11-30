@@ -1,0 +1,8 @@
+<h5>Reviews</h5>
+<% @restaurant.reviews.each do |review| %>
+  <p>
+    <%= review.comment %>
+  <p>
+    <%= review.rating %> / 5
+  </p>
+<% end %>
