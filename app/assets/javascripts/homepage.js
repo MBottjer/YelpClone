@@ -14,9 +14,3 @@ $.fn.stars = function() {
 $(function starring() {
     $('span.stars').stars();
   });
-
-$(function() {
-
-  starring();
-
-});

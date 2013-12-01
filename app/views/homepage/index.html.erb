@@ -1,11 +1,24 @@
 <% @restaurants.each do |restaurant| %>
 <div class="wrapper">
+  <div class="wrapper-restaurant">
   <p class="restaurant-name">
     <strong><%= link_to restaurant.name, restaurant %></strong>
   </p>
   <p>
     <%= restaurant.description %>
   </p>
+  <p>
+    <% sum = 0 %>
+    <% restaurant.reviews.each do |review| %>
+    <% sum = review.rating + sum %>
+    <% end %>
+  <h6>
+    Average Customer Rating:
+  </h6>
+    <span class="stars average"><%= (sum/restaurant.reviews.count) %>
+    </span>
+  </p>
+  </div>
   <h5>Comments</h5>
   <% restaurant.reviews.each do |review| %>
     <%= review.comment %>

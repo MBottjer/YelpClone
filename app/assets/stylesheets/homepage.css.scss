@@ -34,7 +34,7 @@ div.wrapper {
   margin-top:10px;
   border-radius: 4px;
   background-color: white;
-  opacity:0.7;
+  opacity:0.8;
 }
 
 .navbar {
@@ -78,5 +78,8 @@ body {
 
 div.google-maps {
   float:right;
-  
+}
+
+div.wrapper-restaurant {
+  border-bottom:1px dotted black;
 }
