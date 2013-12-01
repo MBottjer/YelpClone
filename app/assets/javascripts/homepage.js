@@ -14,3 +14,13 @@ $.fn.stars = function() {
 $(function starring() {
     $('span.stars').stars();
   });
+
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("div.comments").hide();
+    });
+
+    $("#show").click(function(){
+        $("div.comments").show();
+    });
+});

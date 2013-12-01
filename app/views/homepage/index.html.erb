@@ -18,14 +18,19 @@
     <span class="stars average"><%= (sum/restaurant.reviews.count) %>
     </span>
   </p>
+  <span class="update-delete"><%= link_to "Edit", edit_restaurant_path(restaurant) %></span>
+  <span class="update-delete"><%= link_to "Delete", restaurant_path(restaurant), method: :delete, data: { confirm: 'Are you sure?'} %></span>
+  <button id="hide">Hide Comments</button>
+  <button id="show">Show Comments</button>
   </div>
+  <div class="comments">
   <h5>Comments</h5>
   <% restaurant.reviews.each do |review| %>
     <%= review.comment %>
   <span class="stars"><%= review.rating %></span>
   <% end %>
-  <span class="update-delete"><%= link_to "Edit", edit_restaurant_path(restaurant) %></span>
-  <span class="update-delete"><%= link_to "Delete", restaurant_path(restaurant), method: :delete, data: { confirm: 'Are you sure?'} %></span>
+  
+   </div>
 </div>
 <% end %>
 
