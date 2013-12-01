@@ -26,13 +26,29 @@ a.add-rest {
 }
 
 div.wrapper {
-  background-color: black;
-  width:400px;
+  /*background-color: black;*/
+  width:350px;
+  border-style:solid;
+  border-width: 1px;
+  border-color: black;
+  margin-top:10px;
+  border-radius: 4px;
+  background-color: white;
+  opacity:0.7;
 }
 
 .navbar {
   background-color: black;
 }
+
+.navbar a:link    {color:white;}
+.navbar a:visited {color:white;}
+.navbar a:hover   {color:blue;}
+
+a:link {color:black;}
+a:visited {color:#380000 ;}
+a:hover   {color:blue;}
+a:active  {color:yellow;}
 
 .navbar-brand {
   color:#F0F0F0;
@@ -48,4 +64,19 @@ div#map-canvas {
   width:200px;
   float:right;
   display:inline-block;
+}
+
+body {
+  background: url(wine.jpg) no-repeat 0 100%;
+  background-color: black;
+}
+
+/*img.header-image {
+  width:100%;
+  height:100px;
+}*/
+
+div.google-maps {
+  float:right;
+  
 }
