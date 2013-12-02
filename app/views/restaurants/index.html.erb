@@ -25,8 +25,12 @@
   </p>
 
   <p>
-    <%= f.submit %>
+    <%= f.submit 'Add Restaurant', :class => 'stripe-button' %>
   </p>
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="A month's subscription"
+          data-amount="500"></script>
 <% end %>
 
 

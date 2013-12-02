@@ -35,6 +35,8 @@ gem 'gmaps4rails'
 
 gem 'geocoder'
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 gem 'twitter-bootstrap-rails',
     github: 'seyhunak/twitter-bootstrap-rails',
     branch: 'bootstrap3'

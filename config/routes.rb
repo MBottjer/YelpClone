@@ -4,7 +4,7 @@ Yelp::Application.routes.draw do
   get "homepage/index"
 
   root "homepage#index"
-
+  resources :charges
   resources :restaurants do 
     resources :reviews 
   end
