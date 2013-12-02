@@ -15,7 +15,12 @@
   <h6>
     Average Customer Rating:
   </h6>
-    <span class="stars average"><%= (sum/restaurant.reviews.count) %>
+    <span class="stars average">
+      <% if restaurant.reviews.count==0 %>
+      <%= 0 %>
+      <% else %>
+      <%=  (sum/restaurant.reviews.count) %>
+      <% end %>
     </span>
   </p>
   <span class="update-delete"><%= link_to "Edit", edit_restaurant_path(restaurant) %></span>
