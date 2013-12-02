@@ -4,5 +4,9 @@ class Restaurant < ActiveRecord::Base
 
   geocoded_by :address
   after_validation :geocode 
+
+  def average
+    reviews.map(&:rating).inject(&:+) / reviews.count unless reviews.count == 0
+  end
   
 end
