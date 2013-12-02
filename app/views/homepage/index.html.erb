@@ -12,9 +12,7 @@
           Average Customer Rating:
         </h6>
           <span class="stars average">
-            <% @restaurants.each do |restaurant| %>
               <%= restaurant.average %>
-            <% end %>
           </span>
       </p>
       <span class="update-delete"><%= link_to "Edit", edit_restaurant_path(restaurant) %></span>
