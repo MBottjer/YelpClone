@@ -16,11 +16,15 @@ $(function starring() {
   });
 
 $(document).ready(function(){
-    $("#hide").click(function(){
-        $("div.comments").hide();
+
+    var par = $('.comments');
+    $(par).hide();
+
+    $(".hide-comments").click(function(){
+        $(this).parent().parent().find(".comments").hide();
     });
 
-    $("#show").click(function(){
-        $("div.comments").show();
+    $(".show-comments").click(function(){
+        $(this).parent().parent().find(".comments").show();
     });
 });
