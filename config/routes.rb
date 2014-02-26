@@ -1,5 +1,5 @@
 Yelp::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   get "restaurant/index"
   get "homepage/index"
 
@@ -8,6 +8,8 @@ Yelp::Application.routes.draw do
   resources :restaurants do 
     resources :reviews 
   end
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

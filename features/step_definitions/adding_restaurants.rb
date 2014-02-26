@@ -20,10 +20,11 @@ end
 
 Given(/^A restaurant exists$/) do
   visit '/'
-  click_link "Add Restaurants"
+  click_link "+ Add Restaurants"
   fill_in "Name", with: "Devesh"
   fill_in "Description", with: "the creme friache was awesome"
-  click_on "Save Restaurant"
+  fill_in "Address", with: "new york usa"
+  click_on "Add Restaurant"
 end
 
 When(/^I click "(.*?)"$/) do |arg1|
@@ -34,6 +35,23 @@ Given(/^I go back to the homepage$/) do
   visit '/'
 end
 
+Given(/^I am signed in$/) do
+  visit '/'
+  click_link "Sign Up"
+  fill_in "Email", with: "devesh@hotmail.com"
+  fill_in "Password", with: "devesh1fender"
+  fill_in "Password confirmation", with: "devesh1fender"
+  click_on "Sign up"
+end
+
+When(/^I fill out "(.*?)" with "(.*?)"$/) do |arg1, arg2|
+  fill_in arg1, with: arg2 
+end
+
 And /^show me the page$/ do
   save_and_open_page
+end
+
+Given(/^I am on the page for Devesh$/) do
+  visit restaurant_path FactoryGirl.create(:devesh)
 end

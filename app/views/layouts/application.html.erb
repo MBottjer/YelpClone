@@ -51,6 +51,7 @@
         <a class="navbar-brand functions add-rest" href="/restaurants">+ Add Restaurants</a>
         <a class="navbar-brand functions signing" href="/users/sign_up">Sign Up</a>
         <a class="navbar-brand functions" href="/users/sign_in">Sign In</a>
+        <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
         <a data-method="delete" class="navbar-brand functions" href="/users/sign_out">Sign Out</a>
         <div class="nav-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">

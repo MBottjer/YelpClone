@@ -25,6 +25,11 @@
   </p>
 
   <p>
+    <%= f.label :owner_email, "Owner's email" %>
+    <%= f.text_field :owner_email %>
+  </p>
+
+  <p>
     <%= f.submit 'Add Restaurant', :class => 'stripe-button' %>
   </p>
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"

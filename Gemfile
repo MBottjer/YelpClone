@@ -35,6 +35,16 @@ gem 'gmaps4rails'
 
 gem 'geocoder'
 
+gem 'capybara-email'
+
+gem 'factory_girl'
+
+gem 'omniauth'
+
+gem 'omniauth-facebook'
+
+gem 'certified'
+
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 gem 'twitter-bootstrap-rails',

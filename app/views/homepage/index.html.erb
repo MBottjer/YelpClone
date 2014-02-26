@@ -17,10 +17,9 @@
       </p>
       <span class="update-delete"><%= link_to "Edit", edit_restaurant_path(restaurant) %></span>
       <span class="update-delete"><%= link_to "Delete", restaurant_path(restaurant), method: :delete, data: { confirm: 'Are you sure?'} %></span>
-      <button class="hide-comments">Hide Comments</button>
-      <button class="show-comments">Show Comments</button>
+      <button href="#collapse<%= restaurant.id %>" class="show-comments">Show Comments</button>
     </div>
-    <div class="comments">
+    <div class="comments" id="collapse<%= restaurant.id %>" style="display:none">
       <h5>Comments</h5>
       <% restaurant.reviews.each do |review| %>
         <%= review.comment %>
